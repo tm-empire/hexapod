@@ -1,19 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer@3.3.0/dist/model-viewer.min.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spider Robot Showcase</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script type="module"
+src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 </head>
+
 <body>
-    <model-viewer src="spider-robot-complete-assm-Assembly.glb"
-              alt="FreeCAD Model"
-              camera-controls
-              auto-rotate
-              ar
-              environment-image="neutral"
-              shadow-intensity="1">
+
+<div id="bg"></div>
+
+<header>
+
+<h1>Spider Robot</h1>
+
+<p>Designed in FreeCAD | Robotics Project</p>
+
+</header>
+
+<section class="container">
+
+<div class="viewer">
+
+<model-viewer
+
+id="robot"
+
+src="spider-robot-complete-assm-Assembly.glb"
+
+camera-controls
+
+auto-rotate
+
+ar
+
+shadow-intensity="1"
+
+exposure="1"
+
+environment-image="neutral"
+
+tone-mapping="commerce"
+
+interaction-prompt="auto"
+
+loading="eager">
+
 </model-viewer>
+
+</div>
+
+<div class="info">
+
+<h2>Project Overview</h2>
+
+<p>
+
+A multi-legged spider robot designed in CAD. The model demonstrates
+
+robotic leg assembly, mechanical joints and chassis design.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Legs</h3>
+
+<p>8 Mechanical Legs</p>
+
+</div>
+
+<div class="card">
+
+<h3>Software</h3>
+
+<p>FreeCAD</p>
+
+</div>
+
+<div class="card">
+
+<h3>Purpose</h3>
+
+<p>Robotics Prototype</p>
+
+</div>
+
+<div class="card">
+
+<h3>Viewer</h3>
+
+<p>Google Model Viewer</p>
+
+</div>
+
+</div>
+
+<button id="rotateBtn">
+
+Pause Rotation
+
+</button>
+
+</div>
+
+</section>
+
+<script type="module" src="script.js"></script>
+
 </body>
+
 </html>
